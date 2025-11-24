@@ -79,7 +79,7 @@ export class StarlightTOC extends HTMLElement {
 		let observer;
 		const observe = () => {
 			if (observer) return;
-			observer = new IntersectionObserver(setCurrent, { rootMargin: this.getRootMargin() });
+			observer = new IntersectionObserver(setCurrent, { rootMargin: this.#getRootMargin() });
 			toObserve.forEach((h) => observer.observe(h));
 		};
 		observe();
