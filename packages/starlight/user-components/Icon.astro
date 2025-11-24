@@ -1,16 +1,8 @@
 ---
-import { Icons, type StarlightIcon } from '../components/Icons';
-
-interface Props {
-	name: StarlightIcon;
-	label?: string;
-	color?: string;
-	size?: string;
-	class?: string;
-}
+import { Icons } from '../components/Icons';
 
 const { name, label, size = '1em', color } = Astro.props;
-const a11yAttrs = label ? ({ 'aria-label': label } as const) : ({ 'aria-hidden': 'true' } as const);
+const a11yAttrs = label ? ({ 'aria-label': label }) : ({ 'aria-hidden': 'true' });
 
 /**
  * The fragment around the element is used as a workaround to avoid a trailing whitespace in the output.

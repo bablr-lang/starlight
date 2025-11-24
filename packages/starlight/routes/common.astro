@@ -1,8 +1,8 @@
 ---
 import { render } from 'astro:content';
 import Page from '../components/Page.astro';
-import { getRoute, useRouteData } from '../utils/routing/data';
-import { attachRouteDataAndRunMiddleware } from '../utils/routing/middleware';
+import { getRoute, useRouteData } from '../utils/routing/data.js';
+import { attachRouteDataAndRunMiddleware } from '../utils/routing/middleware.js';
 
 const route = await getRoute(Astro);
 /**
@@ -20,4 +20,6 @@ await attachRouteDataAndRunMiddleware(Astro, useRouteData(Astro, route, renderRe
 const { Content, entry } = Astro.locals.starlightRoute;
 ---
 
-<Page>{Content && <Content frontmatter={entry.data} />}</Page>
+<Page>{
+Content && <Content frontmatter={entry.data} />
+}</Page>

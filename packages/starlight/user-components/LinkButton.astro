@@ -1,14 +1,5 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
-import type { StarlightIcon } from '../components/Icons';
 import Icon from './Icon.astro';
-
-interface Props extends Omit<HTMLAttributes<'a'>, 'href'> {
-	href: string | URL;
-	icon?: StarlightIcon | undefined;
-	iconPlacement?: 'start' | 'end' | undefined;
-	variant?: 'primary' | 'secondary' | 'minimal';
-}
 
 const {
 	class: className,
@@ -68,10 +59,10 @@ const {
 			}
 		}
 
-		:global(.sl-markdown-content) .sl-link-button {
+		:global(.sl-cstml-content) .sl-link-button {
 			margin-inline-end: 1rem;
 		}
-		:global(.sl-markdown-content) .sl-link-button:not(:where(p *)) {
+		:global(.sl-cstml-content) .sl-link-button:not(:where(p *)) {
 			margin-block: 1rem;
 		}
 	}

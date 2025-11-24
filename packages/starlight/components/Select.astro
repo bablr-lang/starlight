@@ -1,17 +1,6 @@
 ---
 import Icon from '../user-components/Icon.astro';
 
-interface Props {
-	label: string;
-	icon: Parameters<typeof Icon>[0]['name'];
-	width?: string;
-	options: Array<{
-		label: string;
-		value: string;
-		selected: boolean;
-	}>;
-}
-
 /**
  * The `autocomplete="off"` attribute is used to prevent the browser from automatically selecting a
  * value for this input, e.g. based on the user's previous selections, as this could lead to

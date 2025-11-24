@@ -1,12 +1,4 @@
 ---
-import type { TocItem } from '../../utils/generateToC';
-
-interface Props {
-	toc: TocItem[];
-	depth?: number;
-	isMobile?: boolean;
-}
-
 const { toc, isMobile = false, depth = 0 } = Astro.props;
 ---
 

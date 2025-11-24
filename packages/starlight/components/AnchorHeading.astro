@@ -1,5 +1,4 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
 import { transform } from 'ultrahtml';
 import sanitize from 'ultrahtml/transformers/sanitize';
 // These styles are included globally by default, but can be removed when `markdown.headingLinks` is
@@ -8,11 +7,7 @@ import sanitize from 'ultrahtml/transformers/sanitize';
 import '../style/anchor-links.css';
 import { AstroError } from 'astro/errors';
 
-const headingLevels = [1, 2, 3, 4, 5, 6, '1', '2', '3', '4', '5', '6'] as const;
-interface Props extends HTMLAttributes<'h1'> {
-	level: 1 | 2 | 3 | 4 | 5 | 6 | `${1 | 2 | 3 | 4 | 5 | 6}`;
-	id: string;
-}
+const headingLevels = [1, 2, 3, 4, 5, 6, '1', '2', '3', '4', '5', '6'];
 
 const { level, id, ...attrs } = Astro.props;
 
@@ -29,7 +24,7 @@ if (!headingLevels.includes(level)) {
 	);
 }
 
-const HeadingElement = `h${level}` as const;
+const HeadingElement = `h${level}`;
 const headingHTML = await Astro.slots.render('default');
 const headingString = await transform(headingHTML, [sanitize({ unblockElements: [] })]);
 const accessibleLabel = Astro.locals.t('heading.anchorLabel', {

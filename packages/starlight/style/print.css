@@ -89,45 +89,24 @@
 	}
 
 	/* components/MarkdownContent.astro */
-	.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) {
+	.sl-cstml-content :is(h1, h2, h3, h4, h5, h6) {
 		break-after: avoid;
 	}
-	.sl-markdown-content :is(p, li) {
+	.sl-cstml-content :is(p, li) {
 		orphans: 2;
 		widows: 2;
 	}
-	.sl-markdown-content pre {
+	.sl-cstml-content pre {
 		overflow-x: hidden;
 		white-space: pre-wrap;
 	}
-	.sl-markdown-content .expressive-code,
-	.sl-markdown-content figure,
-	.sl-markdown-content pre {
+	.sl-cstml-content .expressive-code,
+	.sl-cstml-content figure,
+	.sl-cstml-content pre {
 		break-inside: avoid;
 	}
-	.expressive-code .frame.is-terminal .header::before {
-		/* Ensure terminal frame dots are visible even if backgrounds are disabled. */
-		box-shadow: inset 99rem 99rem var(--sl-color-gray-5);
-	}
-	.expressive-code .frame.has-title:not(.is-terminal) .header {
-		/* Divide title bar and code without relying on background colors. */
-		background: transparent;
-		border-bottom: 1px solid var(--sl-color-gray-6);
-	}
-	.expressive-code .frame.has-title:not(.is-terminal) .title {
-		/* Hide title tab background color. */
-		background: transparent;
-	}
-	.expressive-code .frame.has-title:not(.is-terminal) .title::after {
-		/* Remove title tab highlight. */
-		border-top: 0;
-	}
-	.expressive-code .copy {
-		/* Ensure Expressive Code copy button is hidden when printing from touch devices. */
-		display: none;
-	}
 	/* Inline code */
-	.sl-markdown-content code:not(:where(.not-content *)) {
+	.sl-cstml-content code:not(:where(.not-content *)) {
 		background-color: transparent;
 		padding: 0;
 		margin-block: unset;

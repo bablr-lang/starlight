@@ -1,12 +1,9 @@
 ---
-import { attachRouteDataAndRunMiddleware } from '../utils/routing/middleware';
+import { attachRouteDataAndRunMiddleware } from '../utils/routing/middleware.js';
 import {
 	generateStarlightPageRouteData,
-	type StarlightPageProps as Props,
-} from '../utils/starlight-page';
+} from '../utils/starlight-page.js';
 import Page from './Page.astro';
-
-export type StarlightPageProps = Props;
 
 await attachRouteDataAndRunMiddleware(
 	Astro,
