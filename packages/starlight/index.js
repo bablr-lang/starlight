@@ -91,6 +91,12 @@ export default function StarlightIntegration(userOpts) {
 						plugins: [
 							vitePluginStarlightUserConfig(command, starlightConfig, config, pluginTranslations),
 						],
+						server: {
+							fs: {
+								// TODO we only need this in dev!
+								allow: ['..'],
+							},
+						},
 					},
 					scopedStyleStrategy: 'where',
 					// If not already configured, default to prefetching all links on hover.

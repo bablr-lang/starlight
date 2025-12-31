@@ -24,6 +24,12 @@
     ".": "./index.js",
     "./locals": "./locals.js",
     "./components": "./components.js",
+    "./components/Bedazzlr.astro": {
+      "import": "./components/Bedazzlr.astro"
+    },
+    "./components/Highlight.js": {
+      "import": "./components/Highlight.js"
+    },
     "./components/LanguageSelect.astro": {
       "import": "./components/LanguageSelect.astro"
     },
@@ -143,6 +149,10 @@
     "@bablr/astro_integration-cstml": "0.2.1",
     "@pagefind/default-ui": "^1.3.0",
     "bcp-47": "^2.1.0",
+    "bedazzlr": "0.2.0",
+    "@bablr/language-en-cstml": "0.11.1",
+    "@bablr/language-en-esnext": "0.2.0",
+    "@bablr/language-en-json": "0.12.0",
     "i18next": "^23.11.5",
     "js-yaml": "^4.1.0",
     "klona": "^2.0.6",

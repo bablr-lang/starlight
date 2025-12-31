@@ -44,6 +44,22 @@
 		overflow-wrap: anywhere;
 	}
 
+	h1 {
+		font-size: --sl-text-h2;
+	}
+
+	h2 {
+		font-size: --sl-text-h4;
+	}
+
+	h3 {
+		font-size: --sl-text-h5;
+	}
+
+	h4 {
+		font-size: --sl-text-h6;
+	}
+
 	code {
 		font-family: var(--__sl-font-mono);
 	}

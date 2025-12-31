@@ -1,7 +1,7 @@
 import { PAGE_TITLE_ID } from '../../constants';
 
 export class StarlightTOC extends HTMLElement {
-	#_current = this.querySelector < HTMLAnchorElement > 'a[aria-current="true"]';
+	#_current = this.querySelector('a[aria-current="true"]');
 	#minH = parseInt(this.dataset.minH || '2', 10);
 	#maxH = parseInt(this.dataset.maxH || '3', 10);
 
@@ -92,7 +92,7 @@ export class StarlightTOC extends HTMLElement {
 				observer = undefined;
 			}
 			clearTimeout(timeout);
-			timeout = setTimeout(() => this.onIdle(observe), 200);
+			timeout = setTimeout(() => this.#onIdle(observe), 200);
 		});
 	};
 

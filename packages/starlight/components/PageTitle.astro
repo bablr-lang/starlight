@@ -2,13 +2,13 @@
 import { PAGE_TITLE_ID } from '../constants';
 ---
 
-<h1 id={PAGE_TITLE_ID}>{Astro.locals.starlightRoute.entry.data.title}</h1>
+<h2 id={PAGE_TITLE_ID}>{Astro.locals.starlightRoute.entry.data.title}</h2>
 
 <style>
 	@layer starlight.core {
-		h1 {
+		h2 {
 			margin-top: 1rem;
-			font-size: var(--sl-text-h1);
+			font-size: var(--sl-text-h2);
 			line-height: var(--sl-line-height-headings);
 			font-weight: 600;
 			color: var(--sl-color-white);
