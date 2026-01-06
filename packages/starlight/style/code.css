@@ -1,0 +1,224 @@
+/* Blog content specific styles */
+/* .blog-content {
+	@apply text-gray-700;
+}
+
+.blog-content h1 {
+	@apply text-4xl font-extrabold text-gray-900 mb-6 mt-8;
+}
+
+.blog-content h2 {
+	@apply text-3xl font-bold text-gray-900 mb-4 mt-6;
+}
+
+.blog-content h3 {
+	@apply text-2xl font-semibold text-gray-900 mb-3 mt-5;
+}
+
+.blog-content p {
+	@apply mb-4 leading-relaxed;
+}
+
+.blog-content ul,
+.blog-content ol {
+	@apply mb-4 pl-6;
+}
+
+.blog-content ul {
+	@apply list-disc;
+}
+
+.blog-content ol {
+	@apply list-decimal;
+}
+
+.blog-content li {
+	@apply mb-2;
+}
+
+.blog-content a {
+	@apply text-orange-600 hover:text-orange-700 underline;
+}
+
+.blog-content blockquote {
+	@apply border-l-4 border-orange-300 pl-4 italic text-gray-600 my-4;
+}
+
+.blog-content code {
+	@apply px-1 py-0.5 rounded text-sm font-mono;
+	cursor: text;
+}
+
+.blog-content pre {
+	@apply p-4 rounded-lg overflow-x-auto my-4;
+}
+
+.blog-content pre > code {
+	padding-inline: 0;
+} */
+
+code .hover {
+	width: 4px;
+	height: 4px;
+	background: red;
+}
+
+code node[name='String'] {
+	color: green;
+}
+
+code node[name='Keyword'] {
+	color: darkred;
+}
+
+code node[name='LineComment'],
+code node[name='BlockComment'] {
+	color: rgb(127, 155, 155);
+}
+
+/* code ::selection {
+	@apply bg-orange-300;
+}
+
+code,
+pre {
+	@apply bg-white;
+	@apply border-blue-200;
+}
+
+pre {
+	@apply border-l-4;
+} */
+
+pre > code {
+	border: 0;
+}
+
+code node > a:first-of-type::before {
+	position: absolute;
+	content: ' ';
+	width: 4px;
+	height: 4px;
+	background: red;
+}
+
+code node.indent-depth-1 :nth-child(-n + 1 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-2 :nth-child(-n + 2 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-3 :nth-child(-n + 3 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-4 :nth-child(-n + 4 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-5 :nth-child(-n + 5 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-6 :nth-child(-n + 6 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-7 :nth-child(-n + 7 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-8 :nth-child(-n + 8 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-9 :nth-child(-n + 9 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-10 :nth-child(-n + 10 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-11 :nth-child(-n + 11 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-12 :nth-child(-n + 12 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-13 :nth-child(-n + 13 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-14 :nth-child(-n + 14 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-15 :nth-child(-n + 15 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+code node.indent-depth-16 :nth-child(-n + 16 of node.token[name='Indent'])::selection {
+	background-color: transparent;
+}
+
+pre {
+	position: relative;
+	z-index: 0;
+}
+
+pre node.token[type='Newline']::before {
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	height: 1.5em;
+	width: 100%;
+	content: ' ';
+}
+
+node > a > .tooltip {
+	text-wrap-mode: nowrap;
+}
+
+/* @font-face {
+	font-family: 'Kronika';
+	src: url('/fonts/KRONIKA_.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+} */
+
+/* @layer utilities {
+	@keyframes fade-in-slide {
+		0% {
+			opacity: 0;
+			transform: translateY(1.5rem);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.animate-fade-in-slide {
+		animation: fade-in-slide 0.6s ease-out forwards;
+	}
+} */
+
+/* body {
+	margin: 0;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.font-kronika {
+	font-family: 'Kronika', sans-serif;
+} */
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
