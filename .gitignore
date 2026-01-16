@@ -22,4 +22,6 @@ test-results/
 
 # Vercel output
 .vercel
+
+# Astro
 .astro

@@ -1,5 +1,5 @@
 {
-  "name": "@astrojs/starlight",
+  "name": "@astro/starlight",
   "version": "0.36.2",
   "description": "Build beautiful, high-performance documentation websites with Astro",
   "scripts": {},
@@ -14,10 +14,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/withastro/starlight",
+    "url": "https://github.com/bablr-lang/starlight",
     "directory": "packages/starlight"
   },
-  "bugs": "https://github.com/withastro/starlight/issues",
+  "bugs": "https://github.com/bablr-lang/starlight/issues",
   "homepage": "https://starlight.astro.build",
   "type": "module",
   "exports": {
