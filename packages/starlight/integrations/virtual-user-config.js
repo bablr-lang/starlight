@@ -29,7 +29,7 @@ export function vitePluginStarlightUserConfig(
 	 * Resolves a path to a Starlight file relative to this file.
 	 * @example
 	 * resolveLocalPath('../utils/git.js');
-	 * // => '"/users/houston/docs/node_modules/@astrojs/starlight/utils/git.js"'
+	 * // => '"/users/houston/docs/node_modules/@bablr/starlight/utils/git.js"'
 	 */
 	const resolveLocalPath = (path) => JSON.stringify(fileURLToPath(new URL(path, import.meta.url)));
 

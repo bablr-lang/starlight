@@ -20,7 +20,7 @@ export default function StarlightIntegration(userOpts) {
 	let userConfig;
 	let pluginTranslations = {};
 	return {
-		name: '@astrojs/starlight',
+		name: '@bablr/starlight',
 		hooks: {
 			'astro:config:setup': async ({
 				addMiddleware,
@@ -48,22 +48,22 @@ export default function StarlightIntegration(userOpts) {
 				pluginTranslations = pluginResult.pluginTranslations;
 				userConfig = starlightConfig;
 
-				addMiddleware({ entrypoint: '@astrojs/starlight/locals', order: 'pre' });
+				addMiddleware({ entrypoint: '@bablr/starlight/locals', order: 'pre' });
 
 				if (!starlightConfig.disable404Route) {
 					injectRoute({
 						pattern: '404',
 						entrypoint: starlightConfig.prerender
-							? '@astrojs/starlight/routes/static/404.astro'
-							: '@astrojs/starlight/routes/ssr/404.astro',
+							? '@bablr/starlight/routes/static/404.astro'
+							: '@bablr/starlight/routes/ssr/404.astro',
 						prerender: starlightConfig.prerender,
 					});
 				}
 				injectRoute({
 					pattern: '[...slug]',
 					entrypoint: starlightConfig.prerender
-						? '@astrojs/starlight/routes/static/index.astro'
-						: '@astrojs/starlight/routes/ssr/index.astro',
+						? '@bablr/starlight/routes/static/index.astro'
+						: '@bablr/starlight/routes/ssr/index.astro',
 					prerender: starlightConfig.prerender,
 				});
 
@@ -83,7 +83,7 @@ export default function StarlightIntegration(userOpts) {
 				// e.g. if a user has `integrations: [starlight(), tailwind()]`, then the order will be
 				// `[starlight(), expressiveCode(), sitemap(), mdx(), tailwind()]`.
 				// This ensures users can add integrations before/after Starlight and we respect that order.
-				const selfIndex = config.integrations.findIndex((i) => i.name === '@astrojs/starlight');
+				const selfIndex = config.integrations.findIndex((i) => i.name === '@bablr/starlight');
 				config.integrations.splice(selfIndex + 1, 0, ...integrations);
 
 				updateConfig({
